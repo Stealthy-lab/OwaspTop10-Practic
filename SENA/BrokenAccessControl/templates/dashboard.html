@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        nav a { margin-right: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Dashboard de {{ username }}</h1>
+    <p>Bienvenido a tu panel. Tu rol es: {{ role }}.</p>
+
+    {% if role == 'admin' %}
+        <p>Eres administrador. Aquí hay un enlace al panel de administración:</p>
+        <p><a href="{{ url_for('admin_panel') }}">Ir al Panel de Administración (Visible para Admin)</a></p>
+    {% endif %}
+
+    <p>Otras funcionalidades para usuarios normales...</p>
+    <nav>
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('logout') }}">Cerrar Sesión</a>
+    </nav>
+</body>
+</html>

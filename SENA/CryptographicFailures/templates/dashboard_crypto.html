@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard (Fallo Criptográfico)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #fff3cd; border: 1px solid #ffc107; padding: 15px; }
+        h1 { color: #856404; }
+        nav a { margin-right: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Dashboard de {{ username }}</h1>
+    <p>Esta página es parte del laboratorio de Fallos Criptográficos.</p>
+    <p>Aunque parece normal, internamente hay problemas de seguridad.</p>
+    <nav>
+        <a href="{{ url_for('index_crypto') }}">Inicio</a>
+        <a href="{{ url_for('logout_crypto') }}">Cerrar Sesión</a>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8d7da; border: 1px solid #dc3545; padding: 15px; }
+        h1 { color: #dc3545; }
+        nav a { margin-right: 15px; }
+    </style>
+</head>
+<body>
+    <h1>¡Peligro! Panel de Administración</h1>
+    <p>Este es un área solo para administradores. Si eres {{ username }}, no deberías estar aquí a menos que seas administrador.</p>
+    <p>Aquí se podría gestionar usuarios, configurar el sistema, ver logs sensibles, etc.</p>
+    <p style="color: #dc3545; font-weight: bold;">¡Un usuario sin privilegios de administrador ha accedido a esta página!</p>
+    <nav>
+        <a href="{{ url_for('dashboard') }}">Volver al Dashboard</a>
+        <a href="{{ url_for('logout') }}">Cerrar Sesión</a>
+    </nav>
+</body>
+</html>

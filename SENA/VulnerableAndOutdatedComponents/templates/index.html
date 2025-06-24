@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hola Usuario</title>
+    <!-- jQuery vulnerable -->
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <h2>Hola desde jQuery vulnerable</h2>
+
+    <div id="greeting"></div>
+
+    <script>
+        var name = "{{ name }}";
+        $('#greeting').html("Hola " + name);
+    </script>
+</body>
+</html>
